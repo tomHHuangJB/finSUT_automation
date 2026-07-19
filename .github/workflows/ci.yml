@@ -114,7 +114,11 @@ jobs:
 
       - name: Install Playwright Chromium
         working-directory: crd-tests
-        run: mvn -B exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install --with-deps chromium"
+        run: >-
+          mvn -B exec:java
+          -Dexec.mainClass=com.microsoft.playwright.CLI
+          -Dexec.classpathScope=test
+          -Dexec.args="install --with-deps chromium"
 
       - name: Start backend
         working-directory: crd-sut/backend

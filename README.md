@@ -182,7 +182,7 @@ If Playwright browser binaries are missing:
 
 ```bash
 cd /Users/tomhuang/prog/crd/crd-tests
-mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install chromium"
+mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.classpathScope=test -Dexec.args="install chromium"
 ```
 
 ## GitHub CI
